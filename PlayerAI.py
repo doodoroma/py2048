@@ -50,7 +50,7 @@ class PlayerAI(IPlayer):
             for e in r:
                 sum_tile += e
 
-        avgValue = sum_tile / (16 - len(empty_cells_list)) / grid.getMaxTile()
+        # avgValue = sum_tile / (16 - len(empty_cells_list)) / grid.getMaxTile()
 
         place_sum = 0
         for x in range(4):
@@ -136,9 +136,9 @@ class PlayerAI(IPlayer):
         cells = node.grid.getAvailableCells()
         if depth <= 0 or node.score <= 0 or len(cells) == 0:
             node.score = self.eval(node.grid)
-            return node;
+            return node
 
-        minNode = Node(node, None);
+        minNode = Node(node, None)
         minNode.score = 99999
         
 
@@ -149,7 +149,7 @@ class PlayerAI(IPlayer):
             if child.score < minNode.score:
                 minNode = child
             if minNode.score <= alfa:
-                break;
+                break
             
             if minNode.score < beta:
                 beta = minNode.score
@@ -159,9 +159,9 @@ class PlayerAI(IPlayer):
     def maximize(self, node, alfa, beta, depth):
         if depth <= 0 or node.score <= 0:
             node.score = self.eval(node.grid)
-            return node;
+            return node
 
-        maxNode = Node(node, None);
+        maxNode = Node(node, None)
         maxNode.score = -99999
         moves = node.grid.getAvailableMoves()
         for m in moves:

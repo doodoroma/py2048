@@ -10,7 +10,7 @@ class MyServerProtocol(WebSocketServerProtocol):
     def __init__(self):
         self.g = Game()
         self.g.setPlayerAI(PlayerAI())
-        self.g.updateGrid = self.UpdateGameStatus;
+        self.g.updateGrid = self.UpdateGameStatus
         self.commands = {
             "StartNewGame": threading.Thread(target=self.g.Start).start
         }
@@ -47,7 +47,7 @@ class MyServerProtocol(WebSocketServerProtocol):
         self.sendMessage(json.dumps(
             {
                 'push': 'status_update',
-                'error': grid.map
+                'data': grid.map
             }).encode('UTF-8'))
 
 def stop_loop():

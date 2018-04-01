@@ -70,6 +70,7 @@ class Game:
                     self.over = True
 
             self.updateGrid(self.grid)
+            time.sleep(0.2)
 
             turn = 1 - turn
 
