@@ -1,0 +1,3 @@
+# cache folders
+__pycache__/*
+.vscode/*
