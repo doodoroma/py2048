@@ -6,7 +6,6 @@
 
 """
 from random import randint
-from IPlayer import IPlayer
 import math
 import queue
 import statistics
@@ -22,7 +21,7 @@ class Node:
         if parent != None:
             self.move = parent.move
 
-class PlayerAI(IPlayer):
+class PlayerAI:
     """My 2048 logic"""
 
     def getMove(self, grid):
@@ -180,3 +179,4 @@ class PlayerAI(IPlayer):
                 alfa = maxNode.score
 
         return maxNode
+    

@@ -4,13 +4,13 @@ directionVectors = (UP_VEC, DOWN_VEC, LEFT_VEC, RIGHT_VEC) = ((-1, 0), (1, 0), (
 vecIndex = [UP, DOWN, LEFT, RIGHT] = range(4)
 
 class Grid:
-    def __init__(self, size = 4):
+    def __init__(self, size, board):
         self.size = size
-        self.map = [[0] * self.size for i in range(self.size)]
+        self.map = board
 
     # Make a Deep Copy of This Object
     def clone(self):
-        gridCopy = Grid()
+        gridCopy = Grid(self.size, self.map)
         gridCopy.map = deepcopy(self.map)
         gridCopy.size = self.size
 

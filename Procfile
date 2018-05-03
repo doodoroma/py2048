@@ -1,1 +1,0 @@
-web: gunicorn py2048.wsgi --log-file -
