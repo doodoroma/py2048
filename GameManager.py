@@ -18,11 +18,19 @@ class Game:
     """Class to handle workflow of the game and display
     status on the console"""
 
-    def __init__(self, size=4, defaultInitialTiles=2, defaultProbability=0.9):
+    def __init__(
+        self,
+        size=4,
+        target=2048,
+        defaultInitialTiles=2,
+        defaultProbability=0.9
+    ):
         """Game constructor
 
         Keyword Arguments:
             size {int} -- Size of the board (size * size) (default: {4})
+            target {int} -- The value any tile should reach on board 
+            (default: {2048})
             defaultInitialTiles {int} -- How many tiles to be initialized at
             the begining of the Game (default: {2})
             defaultProbability {float} -- Probablity of 2 or 4 values for
@@ -84,7 +92,7 @@ class Game:
         print('---------')
         if(self.grid.getMaxTile() >= 2048):
             print(f'Congrats! Score is {self.grid.getMaxTile()}')
-        time.sleep(0.05)
+        time.sleep(0.2)
 
     def _isGameOver(self):
         """Check if the board has a possibility to move or not
