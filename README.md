@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1fa5bce8ab914831993f676edfb67364)](https://app.codacy.com/app/doodoroma/py2048?utm_source=github.com&utm_medium=referral&utm_content=doodoroma/py2048&utm_campaign=Badge_Grade_Dashboard)
+
 **2048** 
 
 *py2048* is a console application of the famous game 2048 with AI. 
