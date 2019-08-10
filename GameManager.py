@@ -46,7 +46,7 @@ class Game:
     def Start(self):
         """Start the whole game. You have to define the AI Player before
         starting the game"""
-        for i in range(self.initTiles):
+        for _ in range(self.initTiles):
             self._insertRandomTile()
 
         # Display the initial status of the board
@@ -68,15 +68,14 @@ class Game:
 
             time.sleep(0.2)
 
-    def _clear(self):
+    @staticmethod
+    def _clear():
         """Clear console
         """
-        # for windows
-        if name == 'nt':
-            _ = system('cls')
-        # for mac and linux(here, os.name is 'posix')
-        else:
-            _ = system('clear')
+        if name == 'nt':    # for windows
+            system('cls')
+        else:               # for mac and linux(here, os.name is 'posix')
+            system('clear')
 
     def _print_status(self, move=None):
         self._clear()

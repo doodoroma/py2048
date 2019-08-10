@@ -3,11 +3,7 @@
     Date: 21-06-2017
 
 """
-from random import randint
 from IPlayer import IPlayer
-import math
-import queue
-import statistics
 
 
 class Node:
@@ -55,7 +51,8 @@ class PlayerAI(IPlayer):
         # moves = grid.getAvailableMoves()
         # return moves[randint(0, len(moves) - 1)] if moves else None
 
-    def eval(self, grid):
+    @staticmethod
+    def eval(grid):
         empty_cells_list = grid.getAvailableCells()
 
         # Heuristic 1: empty_cells -- More empty cell is better

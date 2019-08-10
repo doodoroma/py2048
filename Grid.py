@@ -95,7 +95,7 @@ class Grid:
         """
         return self._getCellValue(pos) == 0
 
-    def move(self, dir):
+    def move(self, direction):
         """Execute a move to a given direction
         All non-zero tile goes toward the direction until other non-zero cell
         becomes the neighbour.
@@ -109,15 +109,15 @@ class Grid:
             bool -- The movement was successful or not. If there was no change
             between the new and the old board, it returns `False`
         """
-        dir = int(dir)
+        direction = int(direction)
 
-        if dir == UP:
+        if direction == UP:
             return self._moveUD(False)
-        if dir == DOWN:
+        if direction == DOWN:
             return self._moveUD(True)
-        if dir == LEFT:
+        if direction == LEFT:
             return self._moveLR(False)
-        if dir == RIGHT:
+        if direction == RIGHT:
             return self._moveLR(True)
 
     def _moveUD(self, down):
@@ -172,7 +172,8 @@ class Grid:
 
         return moved
 
-    def _merge(self, cells):
+    @staticmethod
+    def _merge(cells):
         if len(cells) <= 1:
             return cells
 
