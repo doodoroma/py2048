@@ -6,7 +6,7 @@
 *py2048* is a console application of the famous game 2048 with AI. 
 
 The algorithm uses *Alpha-Beta Pruning* to solve the game.
-More info: https://medium.com/@doodoroma/ai-solution-for-2048-9d591b3cc49c
+More info: [https://medium.com/@doodoroma/ai-solution-for-2048-9d591b3cc49c](https://medium.com/@doodoroma/ai-solution-for-2048-9d591b3cc49c)
 
 *Getting Started*
 
