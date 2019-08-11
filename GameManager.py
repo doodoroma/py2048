@@ -29,7 +29,7 @@ class Game:
 
         Keyword Arguments:
             size {int} -- Size of the board (size * size) (default: {4})
-            target {int} -- The value any tile should reach on board 
+            target {int} -- The value any tile should reach on board
             (default: {2048})
             defaultInitialTiles {int} -- How many tiles to be initialized at
             the begining of the Game (default: {2})
